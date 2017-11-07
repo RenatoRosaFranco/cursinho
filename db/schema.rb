@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171107171055) do
+ActiveRecord::Schema.define(version: 20171107171207) do
 
   create_table "approveds", force: :cascade do |t|
     t.string "avatar"
@@ -61,6 +61,17 @@ ActiveRecord::Schema.define(version: 20171107171055) do
     t.string "email"
     t.boolean "status"
     t.string "token"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "posts", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.text "content"
+    t.boolean "published"
+    t.string "slug"
+    t.string "tags"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
