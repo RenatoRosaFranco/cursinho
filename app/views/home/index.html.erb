@@ -1,0 +1,57 @@
+<%= render partial: 'layouts/header' %>
+
+<section id='presenter' class='jumbotron'>
+	<div class='container'>
+		 <div class='row'>
+		 	 <div class='col-md-12'>
+		 	 	 <ul class='list-unstyled text-center'>
+		 	 	     <li><h1>CEPSR</h1></li>
+		 	 	     <li><p>Cursinho popular de São Roque.</p></li>
+		 	 	     <ul class='list-unstyled'>
+		 	 	     	<li><%= link_to 'Contato', '', class: 'btn btn-primary btn-lg top' %></li>
+		 	 	     </ul>
+		 	 	 </ul>
+		 	 </div>
+		 </div>
+	</div>
+</section>
+
+<section id='about'>
+	<div class='container'>
+		<div class='row'>
+			<div class='col-md-12'>
+
+					<ul class='breadcrumb'>
+						<li><%= link_to 'Home', root_path %></li>
+					</ul>
+					
+					<ul class='list-unstyled'>
+						<li><h2><i class='glyphicon glyphicon-search'></i> O CURSINHO</h2></li>
+						<li><p>Conheça o cursinho popular de São Roque.</p></li>
+						<li><hr></li>
+					</ul>
+
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id='contact'>
+	<div class='container'>
+		<div class='row'>
+			<div class='col-md-12'>
+				
+					<ul class='list-unstyled text-center'>
+						<li><h2><i class='glyphicon glyphicon-search'></i> CONTATO</h2></li>
+						<li><p>Deixe nos sua mensagem.</p></li>
+						<li><hr></li>
+					</ul>
+
+					<%= render partial: 'contact/form' %>
+
+			</div>
+		</div>
+	</div>
+</section>
+
+<%= render partial: 'layouts/footer' %>
