@@ -3,7 +3,7 @@ class CreateNewsletters < ActiveRecord::Migration[5.1]
     create_table :newsletters do |t|
       t.string :name
       t.string :email
-      t.string :status
+      t.boolean :status
       t.string :token
 
       t.timestamps

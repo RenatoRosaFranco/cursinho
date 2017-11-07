@@ -6,10 +6,10 @@ class Contact
 	attr_accessor :name, :phone, :email, :message
 
 	def initialize(params = {})
-		@name = params[:name]
-		@phone = params[:phone]
-		@email = params[:email]
-		@message = params[:message]
+	  @name = params[:name]
+	  @phone = params[:phone]
+	  @email = params[:email]
+	  @message = params[:message]
 	end
 
 	def self.sendEmail
@@ -22,7 +22,7 @@ class Contact
 	end
 
 	def persisted?
-		return false
+	  return false
 	end
 
 	validates :name,

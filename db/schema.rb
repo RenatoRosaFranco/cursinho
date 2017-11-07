@@ -10,7 +10,41 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171107163715) do
+ActiveRecord::Schema.define(version: 20171107171055) do
+
+  create_table "approveds", force: :cascade do |t|
+    t.string "avatar"
+    t.string "name"
+    t.text "description"
+    t.text "university"
+    t.string "slug"
+    t.string "tag"
+    t.integer "edition_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["edition_id"], name: "index_approveds_on_edition_id"
+  end
+
+  create_table "categories", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.string "slug"
+    t.string "tags"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "editals", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.string "file"
+    t.string "slug"
+    t.string "tags"
+    t.integer "edition_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["edition_id"], name: "index_editals_on_edition_id"
+  end
 
   create_table "editions", force: :cascade do |t|
     t.string "name"
@@ -25,7 +59,7 @@ ActiveRecord::Schema.define(version: 20171107163715) do
   create_table "newsletters", force: :cascade do |t|
     t.string "name"
     t.string "email"
-    t.string "status"
+    t.boolean "status"
     t.string "token"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
